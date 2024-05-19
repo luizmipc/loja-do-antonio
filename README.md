@@ -1,7 +1,7 @@
 # loja-do-antonio
  Trabalho avaliativo de sistema de estoque.
 
-# Autores
+## Autores
 * Fábio Lopes Rocha.
 * Gabriel Mauricio Mitidieri Bastos Mol Pimentel.
 * Luiz Marcelo Itapicurú Pereira Costa. 
