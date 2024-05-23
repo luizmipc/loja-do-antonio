@@ -33,15 +33,17 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# I have to comment every app I created when adding a new one.
 INSTALLED_APPS = [
-    'inventory.apps.InventoryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'accounts.apps.AccountsConfig',
+    'inventory.apps.InventoryConfig',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,9 @@ DATABASES = {
     }
 }
 
+
+# Custome user model (added)
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

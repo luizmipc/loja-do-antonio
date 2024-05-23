@@ -8,10 +8,16 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='images/product', default='')
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    quantity = models.IntegerField()
+    # How do I add same products faster?
+    # quantity = models.IntegerField()
+    is_selling = models.BooleanField(default=False)
+    # How do I do this efficiently?
+    # min_quantity = models.IntegerField(default=0)
+    # max_quantity = models.IntegerField(default=0)
     expiration_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    code = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
         return self.name
